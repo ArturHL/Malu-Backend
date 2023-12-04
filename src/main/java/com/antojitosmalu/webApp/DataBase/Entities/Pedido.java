@@ -36,7 +36,7 @@ public class Pedido {
   private Cliente cliente;
 
   @OneToMany(mappedBy = "pedido")
-  private List<DetallesPedido> idDetallesPedido;
+  private List<DetallesPedido> detallesPedido;
 
   // Getters and Setters
 
@@ -73,10 +73,10 @@ public class Pedido {
   }
 
   public List<DetallesPedido> getIdDetallesPedido() {
-    return idDetallesPedido;
+    return detallesPedido;
   }
 
-  public void setIdDetallesPedido(List<DetallesPedido> idDetallesPedido) {
-    this.idDetallesPedido = idDetallesPedido;
+  public void setIdDetallesPedido(List<DetallesPedido> DetallesPedido) {
+    this.detallesPedido = DetallesPedido;
   }
 }
