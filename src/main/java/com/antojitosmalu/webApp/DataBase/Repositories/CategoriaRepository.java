@@ -33,6 +33,12 @@ public class CategoriaRepository implements CategoryRepo{
   }
 
   @Override
+  public CategoryDTO update(CategoryDTO category) {
+    Categoria categoria = categoriaCrudX.save(mapper.toCategoria(category));
+    return mapper.toCategoryDTO(categoria);
+  }
+
+  @Override
   public void delete(Integer id) {
     categoriaCrudX.deleteById(id);
   }
