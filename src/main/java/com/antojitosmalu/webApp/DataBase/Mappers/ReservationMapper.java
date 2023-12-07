@@ -4,6 +4,9 @@ import com.antojitosmalu.webApp.Domain.DTO.ReservationDTO;
 import com.antojitosmalu.webApp.DataBase.Entities.Reservacion;
 import org.mapstruct.Mappings;
 import org.mapstruct.Mapping;
+
+import java.util.List;
+
 import org.mapstruct.InheritInverseConfiguration;
 
 public interface ReservationMapper {
@@ -16,6 +19,7 @@ public interface ReservationMapper {
     @Mapping(target = "clientId", source = "reservacion.cliente.idCliente")
   })
   ReservationDTO toReservationDTO(Reservacion reservacion);
+  List<ReservationDTO> toReservationDTOs(List<Reservacion> reservaciones);
 
   @InheritInverseConfiguration
   Reservacion toReservacion(ReservationDTO reservationDTO);

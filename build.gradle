@@ -31,3 +31,9 @@ tasks.named('bootBuildImage') {
 tasks.named('test') {
 	useJUnitPlatform()
 }
+
+allprojects {
+    tasks.withType(JavaCompile) {
+        options.compilerArgs << '-parameters'
+    }
+}

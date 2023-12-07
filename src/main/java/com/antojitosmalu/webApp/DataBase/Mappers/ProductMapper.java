@@ -4,6 +4,9 @@ import com.antojitosmalu.webApp.Domain.DTO.ProductDTO;
 import com.antojitosmalu.webApp.DataBase.Entities.Producto;
 import org.mapstruct.Mappings;
 import org.mapstruct.Mapping;
+
+import java.util.List;
+
 import org.mapstruct.InheritInverseConfiguration;
 
 public interface ProductMapper {
@@ -19,6 +22,7 @@ public interface ProductMapper {
     @Mapping(source = "detallesPedidos", target = "orderDetails")
   })
   ProductDTO toProductDTO(Producto producto);
+  List<ProductDTO> toProductDTOs(List<Producto> productos);
 
   @InheritInverseConfiguration
   Producto toProducto(ProductDTO productDTO);

@@ -4,6 +4,9 @@ import com.antojitosmalu.webApp.Domain.DTO.OrderDTO;
 import com.antojitosmalu.webApp.DataBase.Entities.Pedido;
 import org.mapstruct.Mappings;
 import org.mapstruct.Mapping;
+
+import java.util.List;
+
 import org.mapstruct.InheritInverseConfiguration;
 
 public interface OrderMapper {
@@ -15,6 +18,7 @@ public interface OrderMapper {
     @Mapping(target = "orderDetails", source = "detallesPedido")
   })
   OrderDTO toOrderDTO(Pedido pedido);
+  List<OrderDTO> toOrderDTOs(List<Pedido> pedidos);
 
   @InheritInverseConfiguration
   Pedido toPedido(OrderDTO orderDTO);
