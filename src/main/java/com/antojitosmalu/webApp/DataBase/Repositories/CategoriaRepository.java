@@ -8,10 +8,13 @@ import com.antojitosmalu.webApp.DataBase.Entities.Categoria;
 import com.antojitosmalu.webApp.DataBase.Mappers.CategoryMapper;
 import com.antojitosmalu.webApp.Domain.DTO.CategoryDTO;
 import com.antojitosmalu.webApp.Domain.Repositories.CategoryRepo;
+import org.springframework.beans.factory.annotation.Autowired;
 
 @Repository
 public class CategoriaRepository implements CategoryRepo{
+  @Autowired
   private CategoriaCrudX categoriaCrudX;
+  @Autowired
   private CategoryMapper mapper;
 
   @Override

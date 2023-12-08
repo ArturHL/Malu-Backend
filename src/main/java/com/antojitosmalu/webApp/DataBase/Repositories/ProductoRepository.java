@@ -9,9 +9,12 @@ import com.antojitosmalu.webApp.Domain.DTO.ProductDTO;
 
 import java.util.List;
 
-public class ProductoRepository implements ProductRepo{
+import org.springframework.beans.factory.annotation.Autowired;
 
+public class ProductoRepository implements ProductRepo{
+  @Autowired
   private ProductoCrudX productoCrudX;
+  @Autowired
   private ProductMapper mapper;
 
   @Override

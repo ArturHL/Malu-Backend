@@ -8,7 +8,9 @@ import org.mapstruct.Mapping;
 import java.util.List;
 
 import org.mapstruct.InheritInverseConfiguration;
+import org.mapstruct.Mapper;
 
+@Mapper(componentModel = "spring", uses = {OrderMapper.class, ReservationMapper.class})
 public interface ClientMapper {
   @Mappings({
     @Mapping(target = "clientId", source = "idCliente"),

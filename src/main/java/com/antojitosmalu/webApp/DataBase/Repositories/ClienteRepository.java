@@ -6,13 +6,16 @@ import com.antojitosmalu.webApp.DataBase.CRUD.ClienteCrudX;
 import com.antojitosmalu.webApp.DataBase.Entities.Cliente;
 import com.antojitosmalu.webApp.Domain.DTO.ClientDTO;
 import com.antojitosmalu.webApp.Domain.Repositories.ClientRepo;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import com.antojitosmalu.webApp.DataBase.Mappers.ClientMapper;
 
 @Repository
 public class ClienteRepository implements ClientRepo {
-  
+  @Autowired
   private ClienteCrudX clienteCrudX;
+  @Autowired
   private ClientMapper mapper;
 
   @Override

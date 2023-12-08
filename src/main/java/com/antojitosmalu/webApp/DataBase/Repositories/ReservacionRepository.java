@@ -7,10 +7,13 @@ import com.antojitosmalu.webApp.DataBase.Entities.Reservacion;
 import com.antojitosmalu.webApp.DataBase.Mappers.ReservationMapper;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 
 public class ReservacionRepository implements ReservationRepo{
-
+  @Autowired
   private ReservacionCrudX reservationCrudX;
+  @Autowired
   private ReservationMapper mapper;
 
   @Override
