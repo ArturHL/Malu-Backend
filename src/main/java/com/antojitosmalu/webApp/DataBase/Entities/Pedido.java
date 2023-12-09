@@ -6,10 +6,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
-
-import java.util.List;
 
 import jakarta.persistence.Column;
 
@@ -34,9 +31,6 @@ public class Pedido {
   @ManyToOne
   @JoinColumn(name = "cliente_id")
   private Cliente cliente;
-
-  @OneToMany(mappedBy = "pedido")
-  private List<DetallesPedido> detallesPedido;
 
   // Getters and Setters
 
@@ -70,13 +64,5 @@ public class Pedido {
 
   public void setCliente(Cliente cliente) {
     this.cliente = cliente;
-  }
-
-  public List<DetallesPedido> getDetallesPedido() {
-    return detallesPedido;
-  }
-
-  public void setDetallesPedido(List<DetallesPedido> detallesPedido) {
-    this.detallesPedido = detallesPedido;
   }
 }

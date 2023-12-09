@@ -1,7 +1,5 @@
 package com.antojitosmalu.webApp.Domain.DTO;
 
-import java.util.List;
-
 public class OrderDTO {
   
   // Attributes
@@ -13,8 +11,6 @@ public class OrderDTO {
   private String status;
 
   private ClientDTO client;
-
-  private List<OrderDetailsDTO> orderDetails;
 
   // Getters and Setters
 
@@ -48,13 +44,5 @@ public class OrderDTO {
 
   public void setClient(ClientDTO client) {
     this.client = client;
-  }
-
-  public List<OrderDetailsDTO> getOrderDetails() {
-    return orderDetails;
-  }
-
-  public void setOrderDetails(List<OrderDetailsDTO> orderDetails) {
-    this.orderDetails = orderDetails;
   }
 }
