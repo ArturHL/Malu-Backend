@@ -10,7 +10,7 @@ import java.util.List;
 import org.mapstruct.InheritInverseConfiguration;
 import org.mapstruct.Mapper;
 
-@Mapper(componentModel = "spring")
+@Mapper(componentModel = "spring", uses = {OrderDetailsMapper.class, ClientMapper.class})
 public interface OrderMapper {
   @Mappings({
     @Mapping(target = "orderId", source = "idPedido"),

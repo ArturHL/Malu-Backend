@@ -83,19 +83,27 @@ public class Producto {
     this.stock = stock;
   }
 
-  public Categoria getIdCategoria() {
-    return categoria;
-  }
-
-  public void setIdCategoria(Categoria categoria) {
-    this.categoria = categoria;
-  }
-
   public String getImagen() {
     return imagen;
   }
 
   public void setImagen(String imagen) {
     this.imagen = imagen;
+  }
+
+  public Categoria getCategoria() {
+    return categoria;
+  }
+
+  public void setCategoria(Categoria categoria) {
+    this.categoria = categoria;
+  }
+
+  public List<DetallesPedido> getDetallesPedidos() {
+    return detallesPedidos;
+  }
+
+  public void setDetallesPedidos(List<DetallesPedido> detallesPedidos) {
+    this.detallesPedidos = detallesPedidos;
   }
 }

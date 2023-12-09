@@ -7,6 +7,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+
 import jakarta.persistence.Column;
 
 @Entity
@@ -45,22 +46,6 @@ public class DetallesPedido {
     this.idDetallesPedido = idDetallesPedido;
   }
 
-  public Pedido getIdPedido() {
-    return pedido;
-  }
-
-  public void setIdPedido(Pedido idPedido) {
-    this.pedido = idPedido;
-  }
-
-  public Producto getIdProducto() {
-    return producto;
-  }
-
-  public void setIdProducto(Producto idProducto) {
-    this.producto = idProducto;
-  }
-
   public Integer getCantidad() {
     return cantidad;
   }
@@ -75,5 +60,21 @@ public class DetallesPedido {
 
   public void setPrecioUnitario(Double precioUnitario) {
     this.precioUnitario = precioUnitario;
+  }
+
+  public Pedido getPedido() {
+    return pedido;
+  }
+
+  public void setPedido(Pedido pedido) {
+    this.pedido = pedido;
+  }
+
+  public Producto getProducto() {
+    return producto;
+  }
+
+  public void setProducto(Producto producto) {
+    this.producto = producto;
   }
 }

@@ -3,6 +3,7 @@ package com.antojitosmalu.webApp.DataBase.Repositories;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
 import com.antojitosmalu.webApp.Domain.Repositories.OrderRepo;
 import com.antojitosmalu.webApp.DataBase.CRUD.PedidoCrudX;
@@ -13,6 +14,7 @@ import com.antojitosmalu.webApp.DataBase.Mappers.OrderMapper;
 import com.antojitosmalu.webApp.Domain.DTO.OrderDTO;
 import com.antojitosmalu.webApp.Domain.DTO.OrderDetailsDTO;
 
+@Repository
 public class PedidoRepository implements OrderRepo{
   @Autowired
   private PedidoCrudX pedidoCrudX;

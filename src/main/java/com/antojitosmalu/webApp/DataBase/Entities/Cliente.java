@@ -77,4 +77,21 @@ public class Cliente {
   public void setTelefono(String telefono) {
     this.telefono = telefono;
   }
+
+  public List<Pedido> getPedidos() {
+    return pedidos;
+  }
+
+  public void setPedidos(List<Pedido> pedidos) {
+    this.pedidos = pedidos;
+  }
+
+  public List<Reservacion> getReservaciones() {
+    return reservaciones;
+  }
+
+  public void setReservaciones(List<Reservacion> reservaciones) {
+    this.reservaciones = reservaciones;
+  }
+  
 }

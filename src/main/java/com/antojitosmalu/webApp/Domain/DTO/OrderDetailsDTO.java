@@ -10,8 +10,6 @@ public class OrderDetailsDTO {
 
   private Double unitPrice;
 
-  private OrderDTO order;
-
   private ProductDTO product;
 
   // Getters and Setters
@@ -38,14 +36,6 @@ public class OrderDetailsDTO {
 
   public void setUnitPrice(Double unitPrice) {
     this.unitPrice = unitPrice;
-  }
-
-  public OrderDTO getOrder() {
-    return order;
-  }
-
-  public void setOrder(OrderDTO order) {
-    this.order = order;
   }
 
   public ProductDTO getProduct() {

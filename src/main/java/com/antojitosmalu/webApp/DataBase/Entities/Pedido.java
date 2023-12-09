@@ -72,11 +72,11 @@ public class Pedido {
     this.cliente = cliente;
   }
 
-  public List<DetallesPedido> getIdDetallesPedido() {
+  public List<DetallesPedido> getDetallesPedido() {
     return detallesPedido;
   }
 
-  public void setIdDetallesPedido(List<DetallesPedido> DetallesPedido) {
-    this.detallesPedido = DetallesPedido;
+  public void setDetallesPedido(List<DetallesPedido> detallesPedido) {
+    this.detallesPedido = detallesPedido;
   }
 }

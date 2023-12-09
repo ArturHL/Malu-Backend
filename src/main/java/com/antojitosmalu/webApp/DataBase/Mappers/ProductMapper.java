@@ -21,11 +21,11 @@ public interface ProductMapper {
     @Mapping(source = "stock", target = "stock"),
     @Mapping(source = "imagen", target = "image"),
     @Mapping(source = "categoria", target = "category"),
-    @Mapping(source = "detallesPedidos", target = "orderDetails")
   })
   ProductDTO toProductDTO(Producto producto);
   List<ProductDTO> toProductDTOs(List<Producto> productos);
 
   @InheritInverseConfiguration
+  @Mapping(target = "detallesPedidos", ignore = true)
   Producto toProducto(ProductDTO productDTO);
 }

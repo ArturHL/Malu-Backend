@@ -10,15 +10,15 @@ import java.util.List;
 import org.mapstruct.InheritInverseConfiguration;
 import org.mapstruct.Mapper;
 
-@Mapper(componentModel = "spring")
+@Mapper(componentModel = "spring", uses = {ClientMapper.class})
 public interface ReservationMapper {
   
   @Mappings({
-    @Mapping(target = "reservationId", source = "reservacion.idReserva"),
-    @Mapping(target = "reservationDate", source = "reservacion.fechaReserva"),
-    @Mapping(target = "reservationState", source = "reservacion.estadoReserva"),
-    @Mapping(target = "reservationDetails", source = "reservacion.detallesReserva"),
-    @Mapping(target = "clientId", source = "reservacion.cliente.idCliente")
+    @Mapping(source = "idReservacion", target = "reservationId"),
+    @Mapping(source = "fechaReservacion", target = "reservationDate"),
+    @Mapping(source = "estadoReservacion", target = "reservationState"),
+    @Mapping(source = "detallesReservacion", target = "reservationDetails"),
+    @Mapping(source = "cliente", target = "client")
   })
   ReservationDTO toReservationDTO(Reservacion reservacion);
   List<ReservationDTO> toReservationDTOs(List<Reservacion> reservaciones);

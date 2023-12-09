@@ -12,7 +12,7 @@ public class ReservationDTO {
 
   private String reservationDetails;
 
-  private Integer clientId;
+  private ClientDTO client;
 
   // Getters and Setters
 
@@ -48,11 +48,11 @@ public class ReservationDTO {
     this.reservationDetails = reservationDetails;
   }
 
-  public Integer getClientId() {
-    return clientId;
+  public ClientDTO getClient() {
+    return client;
   }
 
-  public void setClientId(Integer clientId) {
-    this.clientId = clientId;
+  public void setClient(ClientDTO clientId) {
+    this.client = clientId;
   }
 }

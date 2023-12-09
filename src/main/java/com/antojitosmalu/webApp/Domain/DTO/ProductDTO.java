@@ -1,7 +1,5 @@
 package com.antojitosmalu.webApp.Domain.DTO;
 
-import java.util.List;
-
 public class ProductDTO {
   
   // Attributes
@@ -19,8 +17,6 @@ public class ProductDTO {
   private String image;
 
   private CategoryDTO category; 
-
-  private List<OrderDetailsDTO> orderDetails;
   
   // Getters and Setters
   
@@ -78,13 +74,5 @@ public class ProductDTO {
 
   public void setCategory(CategoryDTO category) {
     this.category = category;
-  }
-
-  public List<OrderDetailsDTO> getOrderDetails() {
-    return orderDetails;
-  }
-
-  public void setOrderDetails(List<OrderDetailsDTO> orderDetails) {
-    this.orderDetails = orderDetails;
   }
 }

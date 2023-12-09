@@ -2,7 +2,6 @@ package com.antojitosmalu.webApp.DataBase.Repositories;
 
 import com.antojitosmalu.webApp.Domain.Repositories.ProductRepo;
 import com.antojitosmalu.webApp.DataBase.CRUD.ProductoCrudX;
-import com.antojitosmalu.webApp.DataBase.Entities.Categoria;
 import com.antojitosmalu.webApp.DataBase.Entities.Producto;
 import com.antojitosmalu.webApp.DataBase.Mappers.ProductMapper;
 import com.antojitosmalu.webApp.Domain.DTO.ProductDTO;
@@ -10,7 +9,9 @@ import com.antojitosmalu.webApp.Domain.DTO.ProductDTO;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public class ProductoRepository implements ProductRepo{
   @Autowired
   private ProductoCrudX productoCrudX;
@@ -49,8 +50,8 @@ public class ProductoRepository implements ProductRepo{
   }
 
   @Override
-  public List<ProductDTO> getByCategory(Categoria category){
-    List<Producto> productos = productoCrudX.findByCategoria(category);
+  public List<ProductDTO> getByCategoryId(Integer category){
+    List<Producto> productos = productoCrudX.findByCategoriaIdCategoria(category);
     return mapper.toProductDTOs(productos);
   }
 }

@@ -18,16 +18,16 @@ public class Reservacion {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   @Column(name = "reserva_id")
-  private Integer idReserva;
+  private Integer idReservacion;
 
   @Column(name = "fecha_reserva")
-  private String fechaReserva;
+  private String fechaReservacion;
 
   @Column(name = "estado_reserva")
-  private String estadoReserva;
+  private String estadoReservacion;
 
   @Column(name = "detalles_reserva")
-  private String detallesReserva;
+  private String detallesReservacion;
   
   // Relationships
 
@@ -36,44 +36,44 @@ public class Reservacion {
   private Cliente cliente;
 
   // Getters and Setters
-  
-  public Integer getIdReserva() {
-    return idReserva;
+
+  public Integer getIdReservacion() {
+    return idReservacion;
   }
 
-  public void setIdReserva(Integer idReserva) {
-    this.idReserva = idReserva;
+  public void setIdReservacion(Integer idReservacion) {
+    this.idReservacion = idReservacion;
   }
 
-  public Cliente getIdCliente() {
+  public String getFechaReservacion() {
+    return fechaReservacion;
+  }
+
+  public void setFechaReservacion(String fechaReservacion) {
+    this.fechaReservacion = fechaReservacion;
+  }
+
+  public String getEstadoReservacion() {
+    return estadoReservacion;
+  }
+
+  public void setEstadoReservacion(String estadoReservacion) {
+    this.estadoReservacion = estadoReservacion;
+  }
+
+  public String getDetallesReservacion() {
+    return detallesReservacion;
+  }
+
+  public void setDetallesReservacion(String detallesReservacion) {
+    this.detallesReservacion = detallesReservacion;
+  }
+
+  public Cliente getCliente() {
     return cliente;
   }
 
-  public void setIdCliente(Cliente idCliente) {
-    this.cliente = idCliente;
-  }
-
-  public String getFechaReserva() {
-    return fechaReserva;
-  }
-
-  public void setFechaReserva(String fechaReserva) {
-    this.fechaReserva = fechaReserva;
-  }
-
-  public String getEstadoReserva() {
-    return estadoReserva;
-  }
-
-  public void setEstadoReserva(String estadoReserva) {
-    this.estadoReserva = estadoReserva;
-  }
-
-  public String getDetallesReserva() {
-    return detallesReserva;
-  }
-
-  public void setDetallesReserva(String detallesReserva) {
-    this.detallesReserva = detallesReserva;
+  public void setCliente(Cliente cliente) {
+    this.cliente = cliente;
   }
 }
